@@ -1,0 +1,25 @@
+@BASE_URL_GATEWAY_SERVICE = http://localhost:8081
+@UUID = f33a20c9-0004-4d21-9df0-c45090660368
+
+###
+
+# @name set data task  by document id 
+POST http://localhost:8081/application/f33a20c9-0004-4d21-9df0-c45090660367/data HTTP/1.1
+Content-Type: application/json
+
+{
+  "$.customer.ktp.name": "THOJIRMAN ODINSON",
+  "$.asset.license_plate": "B1234ABC
+}
+
+###
+
+# @name create task list
+POST {{BASE_URL_GATEWAY_SERVICE}}/application/start HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "{{UUID}}",
+  "name": "dp-ndf-v0_0_1"
+}
