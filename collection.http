@@ -1,15 +1,48 @@
 @BASE_URL_GATEWAY_SERVICE = http://localhost:8081
-@UUID = f33a20c9-0004-4d21-9df0-c45090660368
+@UUID = f33a20c9-0004-4d21-9df0-c45090660167
+
 
 ###
 
 # @name set data task  by document id 
-POST http://localhost:8081/application/f33a20c9-0004-4d21-9df0-c45090660367/data HTTP/1.1
+POST {{BASE_URL_GATEWAY_SERVICE}}/application/{{UUID}}/data HTTP/1.1
 Content-Type: application/json
 
 {
-  "$.customer.ktp.name": "THOJIRMAN ODINSON",
-  "$.asset.license_plate": "B1234ABC
+  "$.asset.license_plate": "B114DAB",
+  "$.status.application": "approved",
+  "$.customer.ktp.name": "SUDODO",
+  "$.loan_structure.product_id": 1,
+  "$.process.survey_task.survey_branch_id": "343",
+  "$.process.survey_task.surveyor_employee_id": "097110",
+  "$.process.operations_task.processing_branch_id": "343",
+  "$.asset.bpkb_address": "Jl. villa permata",
+  "$.asset.bpkb_number": "D123456789",
+  "$.asset.bpkb_owner_name": "Budi",
+  "$.asset.asset_code": "SUBARU.WRX.2MT",
+  "$.asset.manufacturing_year": 2021,
+  "$.asset.unit_color": "BLUE",
+  "$.asset.chassis_number": "P1234567890129831",
+  "$.asset.engine_number": "E1234567890",
+  "$.asset.bpkb_invoice_number": "INV/2025/03/12/01ABC",
+  "$.submission_date": "2025-03-26T14:59:27+07:00"
+}
+
+###
+
+# @name ekyc
+POST {{BASE_URL_GATEWAY_SERVICE}}/application/{{UUID}}/data HTTP/1.1
+Content-Type: application/json
+
+{
+  "$.customer.ktp.nik": "5171010203040001",
+  "$.customer.ktp.name": "SUDIDI",
+  "$.customer.ktp.birth_date": "1994-04-01",
+  "$.customer.ktp.birth_place": "jakarta",
+  "$.customer.contact.mobile_number": "628123452342",
+  "$.documents.ktp": "73fb642c-e69d-46b4-938f-9c0b8a90f153",
+  "$.documents.selfie": "029492b1-a919-4b7c-85f9-b5b409ad6ec5",
+  "$.channel.ekyc_authority": "bfi"
 }
 
 ###
