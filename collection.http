@@ -3,7 +3,7 @@
 @BASE_URL_LTS = https://microservices-private.sit.bravo.bfi.co.id/lora-task
 @BASE_URL_LTS = http://localhost:8082
 @LICENSE_PLATE = B2234CZ
-@UUID = f33a20c9-0004-4d21-9df0-c45199671511
+@UUID = f33a20c9-0004-4d21-9df0-c45199671752
 
 
 ###
@@ -28,13 +28,12 @@ Content-Type: application/json
   "$.asset.license_plate": "F0194QF",
   "$.customer.domicile.address.street_address": "Jl. villa permata",
   "$.status.application": "pre_approved",
-  "$.customer.ktp.name": "DATA TEST YULIA",
+  "$.customer.ktp.name": "Wadino Pratiwiwiwu",
   "$.loan_structure.product_id": 2,
   "$.process.survey_task.survey_branch_id": "402",
   "$.process.survey_task.surveyor_employee_id": "000000",
   "$.process.operations_task.processing_branch_id": "402",
   "$.submission_date": "2025-04-08T15:30:00Z",
-  "$.asset.bpkb_address": "Jl. villa permata",
   "$.asset.bpkb_number": "D123456789",
   "$.asset.bpkb_owner_name": "BUDI",
   "$.asset.asset_code": "MTRHONDA.VARIO.125FICBS",
@@ -57,26 +56,6 @@ Content-Type: application/json
   "$.documents.tax_notice.document_id": "1bc60281-3655-41c3-a4df-75ce2bbd57a8",
   "$.documents.ktp.document_id": "1bc60281-3655-41c3-a4df-75ce2bbd57a8",
   "$.documents.spouse_ktp.document_id": "1bc60281-3655-41c3-a4df-75ce2bbd57a8",
-  "$.process.stnk_ocr_result.bpkb_number": "01234567",
-  "$.process.stnk_ocr_result.chassis_number": "JM1DE11Y1D0112345",
-  "$.process.stnk_ocr_result.engine_number": "ZYB12345",
-  "$.process.stnk_ocr_result.license_plate": "B1234ZZ",
-  "$.process.stnk_ocr_result.manufacturing_year": "2020",
-  "$.process.stnk_ocr_result.stnk_expiration_date": "2025-03-12",
-  "$.process.stnk_ocr_result.stnk_number": "07654321",
-  "$.process.stnk_ocr_result.tax_expiration_date": "2025-03-12",
-  "$.process.stnk_ocr_result.unit_color": "Hitam",
-  "$.process.stnk_ocr_result.vehicle_brand": "TOYOTA",
-  "$.process.bpkb_ocr_result.bpkb_address": "Jl Menara Avengers No 1",
-  "$.process.bpkb_ocr_result.bpkb_invoice_number": "FA/AA/12345678",
-  "$.process.bpkb_ocr_result.bpkb_number": "01234567",
-  "$.process.bpkb_ocr_result.bpkb_owner_name": "Steve Rogers",
-  "$.process.bpkb_ocr_result.chassis_number": "JM1DE11Y1D0112345",
-  "$.process.bpkb_ocr_result.engine_number": "ZYB12345",
-  "$.process.bpkb_ocr_result.license_plate": "B1234ZZ",
-  "$.process.bpkb_ocr_result.manufacturing_year": "2020",
-  "$.process.bpkb_ocr_result.unit_color": "Hitam",
-  "$.process.bpkb_ocr_result.vehicle_brand": "TOYOTA",
   "$.asset.tax_expiration_date": "2025-03-12",
   "$.asset.stnk_number": "07654321",
   "$.asset.stnk_expiration_date": "2025-03-12",
@@ -117,7 +96,6 @@ Content-Type: application/json
   "$.survey_appointment.survey_location_type": "virtual",
   "$.survey_appointment.survey_resource_type": "vd",
   "$.channel.marketing_id": "2311NC0006",
-  "$.process.survey_task.bpkb_submission.submission_appointment_time": "2025-06-16T11:55:02Z",
   "$.customer.contact.mobile_number": "+628131131113",
   "$.status.reservation_expiry": "2024-03-12T14:30:00Z"
 }
