@@ -3,7 +3,7 @@
 @BASE_URL_LTS = https://microservices-private.sit.bravo.bfi.co.id/lora-task
 @BASE_URL_LTS = http://localhost:8082
 @LICENSE_PLATE = B2234CZ
-@UUID = f33a20c9-0004-4d21-9df0-c4519967176
+@UUID = f33a20c9-0004-4d21-9df0-c45199671762
 
 
 ###
@@ -43,7 +43,7 @@ Content-Type: application/json
   "$.asset.manufacturing_year": "2024",
   "$.asset.unit_color": "BLUE",
   "$.asset.chassis_number": "P1234567890129831",
-  "$.asset.engine_number": "E1234567890"p
+  "$.asset.engine_number": "E1234567890",
   "$.asset.bpkb_invoice_number": "INV/2025/03/12/01ABC",
   "$.channel.ekyc_authority": "partner",
   "$.documents.bpkb_page_1.document_id": "845db5fb-cd70-4e37-a220-ad4b66bb4c85",
