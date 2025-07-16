@@ -3,7 +3,7 @@
 @BASE_URL_LTS = https://microservices-private.sit.bravo.bfi.co.id/lora-task
 @BASE_URL_LTS = http://localhost:8082
 @LICENSE_PLATE = B2234CZ
-@UUID = f33a20c9-0004-4d21-9df0-c45199671928
+@UUID = f33a20c9-0004-4d21-9df0-c45199671929
 
 
 ###
@@ -28,7 +28,7 @@ Content-Type: application/json
   "$.asset.license_plate": "F0194QF",
   "$.customer.domicile.address.street_address": "Jl. villa permata",
   "$.status.application": "pre_approved",
-  "$.customer.ktp.name": "Wadina Demol",
+  "$.customer.ktp.name": "Wadina Demil",
   "$.asset.bpkb_address": "Jl. villa permata",
   "$.survey_appointment.preferred_timezone": "Asia/Jakarta",
   "$.survey_appointment.survey_type": "INSTANT",
@@ -103,5 +103,4 @@ Content-Type: application/json
   "$.survey_appointment.survey_resource_type": "vd",
   "$.survey_appointment.survey_type": "INSTANT",
   "$.survey_appointment.preferred_timezone": "Asia/Jakarta"
-}
 }
