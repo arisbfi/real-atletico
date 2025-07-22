@@ -6,7 +6,7 @@ const password = baseConfig.mq_password;
 
 const queue = "q.lgs.scheduling.appointments.work";
 const start = new Date();
-start.setHours(9, 30, 0, 0);
+start.setHours(18, 30, 0, 0);
 
 const end = new Date(start.getTime() + 30 * 60 * 1000);
 // const end = new Date(start.getTime() + 24 * 60 * 60 * 1000);
@@ -14,7 +14,7 @@ const end = new Date(start.getTime() + 30 * 60 * 1000);
 const appointment_time_target_start = start.toISOString();
 const appointment_time_target_end = end.toISOString();
 
-export const sendMq = async (workflowId) => {
+export const sendMq = async (workflowId, videoUrl) => {
   const payload = {
     appointment_full_detail: {
       appointment_uuid: crypto.randomUUID(),
@@ -32,7 +32,7 @@ export const sendMq = async (workflowId) => {
       appointment_date_target: "2025-12-31",
       appointment_time_target_start,
       appointment_time_target_end,
-      target_duration_minutes: 60,
+      target_duration_minutes: 30,
       timezone_identifier: "Asia/Jakarta",
       priority_level: 0,
       system_owner_lookup_code: "SYSTEM_OWNER_LOS",
@@ -40,7 +40,7 @@ export const sendMq = async (workflowId) => {
       canceled: false,
       cancel_reason:
         "Rescheduled to appointment 908275be-048a-4872-84e7-f7590b60e85a",
-      canceled_at: new Date().toISOString(),
+      canceled_at: "2025-04-15T06:26:19.923628Z",
       rescheduled: false,
       reschedule_reason:
         "Digital Partnership res-cheduling for partner bfi-qa-partner-goto on loan_submission_id f792d5b7-3461-4b6b-aa3f-07c11320ea32",
@@ -48,17 +48,17 @@ export const sendMq = async (workflowId) => {
       rescheduled_to_appointment_uuid: "908275be-048a-4872-84e7-f7590b60e85a",
       resources: [
         {
-          resource_uuid: "76d13599-da3a-44cf-a226-ecd60362f199",
+          resource_uuid: "3a794b35-6d6a-459b-89fa-b96fa589fd1a",
           resource_identifiers: "000000",
           pre_travel_duration_minutes: 30,
           post_travel_duration_minutes: 30,
           resource_type_code: "ADMIN_SURVEY",
-          attribute_1: "Dede Adhyatmika",
-          attribute_2: "lipsum 2",
-          attribute_3: "lipsum 3",
+          attribute_1: "test",
+          attribute_2: "lipsum",
+          attribute_3: "lipsum",
         },
         {
-          resource_uuid: "76d13599-da3a-44cf-a226-ecd60362f198",
+          resource_uuid: "3a794b35-6d6a-459b-89fa-b96fa589fd1a",
           resource_identifiers: "000001",
           pre_travel_duration_minutes: 30,
           post_travel_duration_minutes: 30,
@@ -76,7 +76,7 @@ export const sendMq = async (workflowId) => {
         },
         {
           process_field_key: "survey_video_url",
-          process_field_value: "http://127.0.0.1:8082/rtc/web/start/x2ivSfuymF",
+          process_field_value: videoUrl,
           description: "Survey Video URL",
         },
       ],
