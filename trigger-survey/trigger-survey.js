@@ -56,11 +56,12 @@ const payload = {
   "$.customer.professional.monthly_income": "10000000",
   "$.customer.professional.occupation_type_code": "M",
   "$.documents.ktp.document_id": "e8c507c0-94f7-4418-9d1a-8a4d5e180c2f",
-  "$.documents.selfie.document_id":  "e8c507c0-94f7-4418-9d1a-8a4d5e180c2f",
+  "$.documents.selfie.document_id": "e8c507c0-94f7-4418-9d1a-8a4d5e180c2f",
   "$.loan_structure.product_id": 2,
   "$.loan_structure.product_offering": 11,
   "$.loan_structure.original_amount": "12690000",
   "$.loan_structure.tenure": 12,
+  "$.customer.professional.occupation_code": "PNSBPKAGTU",
 };
 
 (async () => {
@@ -74,12 +75,19 @@ const payload = {
       },
       body: JSON.stringify(payload),
     });
-
+    const res = await fetch(`${baseConfig.lts_base_url}/rtc/web/url`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const videoUrl = await res.json();
+    console.log(`✔ Video URL: ${videoUrl.url}`);
     console.log(`✔ Task generated with workflowId: ${workflowId}`);
     console.log(`✔ License plate: ${payload["$.asset.license_plate"]}`);
     console.log(`✔ Customer name: ${payload["$.customer.ktp.name"]}`);
-    await new Promise((resolve) => setTimeout(resolve, 60000));
-    await sendMq(workflowId);
+    await new Promise((resolve) => setTimeout(resolve, 30000));
+    await sendMq(workflowId, videoUrl.url);
   } catch (error) {
     console.error(error);
   }
