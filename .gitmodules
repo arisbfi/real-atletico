@@ -1,0 +1,3 @@
+[submodule "lora-trigger"]
+	path = lora-trigger
+	url = https://github.com/galiharghubi-bfi/lora-trigger
