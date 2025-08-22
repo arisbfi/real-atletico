@@ -3,7 +3,7 @@
 @BASE_URL_LTS = https://microservices-private.sit.bravo.bfi.co.id/lora-task
 @BASE_URL_LTS = http://localhost:8082
 @LICENSE_PLATE = B2234CZ
-@UUID = f33a20c9-0004-4d21-9df0-c45199671929
+@UUID = f33a20c9-0004-4d21-9df0-c45199671934
 
 
 ###
@@ -33,9 +33,9 @@ Content-Type: application/json
   "$.survey_appointment.preferred_timezone": "Asia/Jakarta",
   "$.survey_appointment.survey_type": "INSTANT",
   "$.loan_structure.product_id": 2,
-  "$.process.survey_task.survey_branch_id": "402",
+  "$.process.survey_task.survey_branch_id": "401",
   "$.process.survey_task.surveyor_employee_id": "000000",
-  "$.process.operations_task.processing_branch_id": "402",
+  "$.process.operations_task.processing_branch_id": "401",
   "$.submission_date": "2025-04-08T15:30:00Z",
   "$.asset.bpkb_number": "D123456789",
   "$.asset.bpkb_owner_name": "BUDI",
@@ -79,7 +79,6 @@ Content-Type: application/json
   "$.customer.bank_information.account_number": "111643252",
   "$.customer.bank_information.bank_id": "47",
   "$.loan_structure.tenure": 24,
-  "$.loan_structure.amount": 10000000,
   "$.loan_structure.billing_date": "2025-05-30",
   "$.loan_structure.capitalized_ntf_amount": 1000000,
   "$.loan_structure.ltv": 0.87,
@@ -90,8 +89,8 @@ Content-Type: application/json
   "$.customer.ktp.birth_place": "Bandung",
   "$.customer.ktp.gender": "M",
   "$.process.survey_task.bpkb_submission.submission_method": "BRANCH_DROPOFF",
-  "$.survey_appointment.start_time": "2025-07-16T15:30:00Z",
-  "$.survey_appointment.end_time": "2025-07-16T15:45:00Z",
+  "$.survey_appointment.start_time": "2025-08-21T15:30:00Z",
+  "$.survey_appointment.end_time": "2025-08-21T15:45:00Z",
   "$.survey_appointment.survey_location_type": "virtual",
   "$.survey_appointment.survey_resource_type": "vd",
   "$.channel.marketing_id": "2311NC0006",
@@ -102,5 +101,18 @@ Content-Type: application/json
   "$.customer.contact.mobile_number": "+628131131113",
   "$.survey_appointment.survey_resource_type": "vd",
   "$.survey_appointment.survey_type": "INSTANT",
-  "$.survey_appointment.preferred_timezone": "Asia/Jakarta"
+  "$.survey_appointment.preferred_timezone": "Asia/Jakarta",
+  "$.customer.personal.marital_status_code": "S",
+  "$.customer.professional.education_code": "S1",
+  "$.customer.professional.monthly_income": "10000000",
+  "$.customer.professional.occupation_type_code": "M",
+  "$.documents.ktp.document_id": "e8c507c0-94f7-4418-9d1a-8a4d5e180c2f",
+  "$.documents.selfie.document_id": "9d40dacc-eef0-4c48-95c6-5a8ca9f3bc2f",
+  "$.loan_structure.original_amount": 10385000,
+  "$.loan_structure.product_id": 2,
+  "$.loan_structure.product_offering": 11,
+  "$.loan_structure.tenure": 12,
+  "$.customer.professional.occupation_code": "PNSBPKAGTU",
+  "$.customer.personal.number_dependents": "1",
+  "$.process.pd_model_overlay.s1.max_funding_ratio": 0.8
 }
